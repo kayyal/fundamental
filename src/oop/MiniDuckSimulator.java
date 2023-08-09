@@ -1,6 +1,9 @@
 package oop;
 
-import oop.behavior.FlyRocketPowered;
+import oop.behavior.fly.FlyRocketPowered;
+import oop.client.Duck;
+import oop.client.MallardDuck;
+import oop.client.ModelDuck;
 
 public class MiniDuckSimulator {
     public static void main(String[] args) {

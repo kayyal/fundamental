@@ -1,7 +1,7 @@
-package oop;
+package oop.client;
 
-import oop.behavior.FlyBehavior;
-import oop.behavior.QuackBehavior;
+import oop.behavior.fly.FlyBehavior;
+import oop.behavior.quack.QuackBehavior;
 
 public abstract class Duck {
 

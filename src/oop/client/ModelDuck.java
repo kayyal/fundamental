@@ -1,7 +1,7 @@
-package oop;
+package oop.client;
 
-import oop.behavior.FlyNoWay;
-import oop.behavior.Quack;
+import oop.behavior.fly.FlyNoWay;
+import oop.behavior.quack.Quack;
 
 public class ModelDuck extends  Duck{
     public ModelDuck() {

@@ -1,9 +1,7 @@
-package oop;
+package oop.client;
 
-import oop.behavior.FlyBehavior;
-import oop.behavior.FlyWithWings;
-import oop.behavior.Quack;
-import oop.behavior.QuackBehavior;
+import oop.behavior.fly.FlyWithWings;
+import oop.behavior.quack.Quack;
 
 public class MallardDuck extends Duck {
     public MallardDuck() {

@@ -1,4 +1,4 @@
-package oop.behavior;
+package oop.behavior.fly;
 
 public class FlyWithWings implements FlyBehavior{
     @Override

@@ -1,4 +1,4 @@
-package oop.behavior;
+package oop.behavior.quack;
 
 public class MuteQuack implements QuackBehavior {
     @Override

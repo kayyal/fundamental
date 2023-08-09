@@ -1,4 +1,4 @@
-package oop.behavior;
+package oop.behavior.quack;
 
 public class Quack implements QuackBehavior{
     @Override

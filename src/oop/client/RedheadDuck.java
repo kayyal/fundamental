@@ -1,7 +1,4 @@
-package oop;
-
-import oop.behavior.FlyBehavior;
-import oop.behavior.QuackBehavior;
+package oop.client;
 
 public class RedheadDuck extends  Duck  {
     @Override

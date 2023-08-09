@@ -1,6 +1,4 @@
-package oop;
-
-import oop.behavior.QuackBehavior;
+package oop.client;
 
 public class RubberDuck extends Duck  {
 

@@ -1,3 +1,5 @@
+package dataStructures;
+
 import java.util.PriorityQueue;
 import java.util.Scanner;
 
