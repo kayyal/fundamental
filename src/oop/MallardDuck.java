@@ -1,6 +1,9 @@
 package oop;
 
-public class MallardDuck extends Duck implements Flyable , Quackable {
+import oop.behavior.FlyBehavior;
+import oop.behavior.QuackBehavior;
+
+public class MallardDuck extends Duck implements FlyBehavior, QuackBehavior {
     @Override
     String display() {
         return super.display();

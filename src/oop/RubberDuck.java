@@ -1,6 +1,8 @@
 package oop;
 
-public class RubberDuck extends Duck implements Quackable{
+import oop.behavior.QuackBehavior;
+
+public class RubberDuck extends Duck implements QuackBehavior {
 
     @Override
     String display() {
