@@ -1,31 +1,30 @@
 package oop.market;
 
+import oop.market.delivery.DeliveryStrategy;
+import oop.market.delivery.StandardDelivery;
+
+import java.util.List;
+
 public class MarketSimulation {
     public static void main(String[] args) {
-        Product laptop = new Product("Laptop", 1000, 2.5, true);
-        Product shirt = new Product("Shirt", 25, 0.3, false);
-        Product shampoo = new Product("Shampoo", 8, 0.5, true);
-        Repository electronicsRepository = new Repository();
-        electronicsRepository.addProduct(laptop);
+        DeliveryStrategy standardDelivery = new StandardDelivery();
 
-        Repository clothingRepository = new Repository();
-        clothingRepository.addProduct(shirt);
+        Repository repository = new Repository();
+        repository.addProduct(new Product("Laptop", 1000, 2.5, true, standardDelivery));
+        repository.addProduct(new Product("Smartphone", 800, 0.5, true, standardDelivery));
+        repository.addProduct(new Product("Shirt", 25, 0.3, false, null)); // Non-shippable
 
-        Repository hygieneRepository = new Repository();
-        hygieneRepository.addProduct(shampoo);
-
-        Market market = new Market("Koorosh");
-        market.addRepository(electronicsRepository);
-        market.addRepository(clothingRepository);
-        market.addRepository(hygieneRepository);
-
-
-        ShoppingCart cart1 = new ShoppingCart();
-        cart1.addItem(laptop);
-        cart1.addItem(shirt);
-
-        double totalPrice = cart1.totalPrice();
-        System.out.println("totalPrice = " + totalPrice);
-
+        // Simulate browsing products and calculating shipping costs
+        List<Product> products = repository.getProducts();
+        for (Product product : products) {
+            System.out.println("Product: " + product.getName());
+            System.out.println("Price: $" + product.getPrice());
+            if (product.isShippable()) {
+                System.out.println("Shipping cost: $" + product.calculateShippingCost());
+            } else {
+                System.out.println("Non-shippable product");
+            }
+            System.out.println();
+        }
     }
 }
