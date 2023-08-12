@@ -6,6 +6,7 @@ import oop.behavior.quack.QuackBehavior;
 public abstract class Duck {
 
     QuackBehavior quackBehavior;
+    FlyBehavior flyBehavior;
 
     public void setQuackBehavior(QuackBehavior quackBehavior) {
         this.quackBehavior = quackBehavior;
@@ -14,8 +15,6 @@ public abstract class Duck {
     public void setFlyBehavior(FlyBehavior flyBehavior) {
         this.flyBehavior = flyBehavior;
     }
-
-    FlyBehavior flyBehavior;
 
     public void performQuack(){
         quackBehavior.quack();;
